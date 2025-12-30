@@ -1,0 +1,32 @@
+backend:
+  name: github
+  repo: USERNAME/portfolio
+  branch: main
+
+media_folder: "assets/img/uploads"
+public_folder: "/assets/img/uploads"
+
+collections:
+  - name: "projects"
+    label: "Projects"
+    folder: "content/projects"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Tech Stack", name: "stack", widget: "list" }
+      - { label: "Demo URL", name: "demo", widget: "string", required: false }
+      - { label: "Content", name: "body", widget: "markdown" }
+
+  - name: "research"
+    label: "Research Projects"
+    folder: "content/research"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Abstract", name: "abstract", widget: "text" }
+      - { label: "Keywords", name: "keywords", widget: "list" }
+      - { label: "PDF URL", name: "pdf", widget: "string", required: false }
+      - { label: "Content", name: "body", widget: "markdown" }
