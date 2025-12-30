@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: USERNAME/portfolio
+  repo: andrisiregar/portfolio
   branch: main
 
 media_folder: "assets/img/uploads"
